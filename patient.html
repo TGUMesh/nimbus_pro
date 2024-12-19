@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+
+  .emergency-button {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background-color: red;
+        color: white;
+        padding: 15px 30px;
+        font-size: 1.2em;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        text-align: center;
+        text-transform: uppercase;
+        animation: blink 3s infinite;
+        z-index: 1000;
+      }
+
+      @keyframes blink {
+        0% { opacity: 1; }
+        50% { opacity: 0.5; }
+        100% { opacity: 1; }
+      }
+
+      .emergency-button:hover {
+        background-color: darkred;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Patient Dashboard</h1>
+  </header>
+  <section class="section">
+    <div class="section-content">
+      <div class="card">
+        <h3>Book Appointment</h3>
+        <p>Schedule a consultation with your doctor.</p>
+        <a href="schedulepatient.html">Book Now</a>
+      </div>
+      <div class="card">
+        <h3>Video Consultation</h3>
+        <p>Consult with your doctor online.</p>
+        <a href="scheduledoctor.html">Book Now</a>
+        <button class="emergency-button" onclick="
+        handleEmergency()
+        ">Preganancy Emergency</button>
+        <script>
+          function handleEmergency() {
+            alert("Emergency services have been notified. Please remain calm while help is on the way.");
+            // Add functionality to notify hospital staff or send an emergency signal.
+          }
+        </script>
+
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <p>&copy; 2024 Healthcare System. All rights reserved.</p>
+  </footer>
+</body>
+</html>
